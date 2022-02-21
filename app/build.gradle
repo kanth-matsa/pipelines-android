@@ -32,12 +32,15 @@ android {
     }
 
     // If you need to add more flavors, consider using flavor dimensions.
+    flavorDimensions "mock", "prod"
     productFlavors {
         mock {
             applicationIdSuffix = ".mock"
+            versionNameSuffix "-mock"
+            dimension "mock"
         }
-        prod {
-
+        full {
+           dimension "prod"
         }
     }
 
